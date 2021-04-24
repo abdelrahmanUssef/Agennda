@@ -80,7 +80,7 @@
             <div class="col-sm-6 mb-3">
               <div class="card h-100">
                 <div class="card-body">
-                  <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+                  <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">My</i>Cart</h6>
 
                   <table class="table bg-light  table-hover">
                     <thead class="table-dark">
@@ -118,7 +118,7 @@
             <div class="col-sm-6 mb-3">
               <div class="card h-100">
                 <div class="card-body">
-                  <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+                  <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">My</i>orders</h6>
 
                   <table class="table bg-light  table-hover">
                     <thead class="table-dark">
@@ -126,7 +126,6 @@
                       <th>name</th>
                       <th>total price</th>
                       <th>quantity</th>
-                      <th>Action</th>
                     </thead>
                     <?php
                     $select = "SELECT product.proName,cart.price,cart.prodQuan,cart.id 
@@ -141,8 +140,6 @@
                         <td> <?php echo $data['proName']; ?> </td>
                         <td><?php echo $data['price']; ?></td>
                         <td><?php echo $data['prodQuan']; ?></td>
-                        <td><a href="cart.php?delete=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
-
                       </tr>
                     <?php } ?>
                   </table>
